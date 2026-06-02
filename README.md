@@ -40,7 +40,7 @@ Dataset contains movie information including:
 * Genre Label
 * Plot Description
 
-The dataset contains training and testing files in TXT format separated using `:::` delimiters. The dataset is designed for NLP-based genre prediction tasks.
+The dataset contains training and testing files in TXT format separated using `:::` delimiters.
 
 Files Used:
 
@@ -156,12 +156,43 @@ Advantages:
 * Strong baseline classifier
 * Handles sparse vectors efficiently
 
-### Support Vector Machine
+### Support Vector Machine (SVM)
 
 Advantages:
 
 * Effective for high-dimensional text data
 * Usually produces higher accuracy in NLP tasks
+
+---
+
+## Best Performing Model
+
+After training and evaluating all implemented algorithms, the project automatically compares performance using evaluation metrics such as:
+
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+
+The algorithm producing the highest performance is automatically selected as the final deployed model.
+
+Model Selection Workflow:
+
+* Train Naive Bayes
+* Train Logistic Regression
+* Train Support Vector Machine
+* Compare model performance
+* Automatically select highest performing algorithm
+* Save best model for deployment
+
+Saved Components:
+
+* best_model.pkl
+* tfidf.pkl
+
+These components are used by the prediction system during inference.
+
+Although Support Vector Machine commonly performs strongly for text classification problems, the final selected model depends on experimental evaluation performed on the dataset.
 
 ---
 
@@ -259,7 +290,18 @@ Confidence:
 
 ## Results
 
-The project compares multiple machine learning algorithms and automatically selects the best performing model based on evaluation metrics.
+The project performs comparative analysis across multiple machine learning algorithms using several evaluation metrics.
+
+Performance analysis includes:
+
+* Accuracy Comparison
+* Precision Analysis
+* Recall Analysis
+* F1 Score Analysis
+* Classification Reports
+* Confusion Matrices
+
+The highest-performing model is automatically selected and deployed for prediction tasks.
 
 ---
 
@@ -267,18 +309,30 @@ The project compares multiple machine learning algorithms and automatically sele
 
 Name:
 
-Your Name
+Deependra Pandey
 
 Project:
+
+Movie Genre Classification using Machine Learning
+
+Program:
 
 Virtual Internship Project
 
 Domain:
 
-Machine Learning / NLP
+Machine Learning / Natural Language Processing
+
+Tools & Environment:
+
+Python, Google Colab, Scikit-Learn, GitHub
 
 ---
 
 ## License
 
-Educational Purpose Only
+This project is licensed under the MIT License and is intended primarily for academic, educational, and research purposes.
+
+Dataset rights and ownership remain with their respective creators and sources.
+
+
